@@ -1,8 +1,8 @@
 # README for FastAPI backend for BOPE-GPT
 
-Some details to help understand the structure of the backend. This is the FastAPI-based backend for the BOPE-GPT App -The actual code that lets you run the optimization process on a dataset of your choosing and interact with Cohere for the preference selection via LLM. Running this FastAPI app exposes CORS-enabled API endpoints to easily run the BOPE process on a pre-processed dataset. 
+This is the FastAPI-based backend for the BOPE-GPT App -The actual code that runs the optimization process on a dataset of choosing and interacts with Cohere for the preference selection via LLM. Running this FastAPI app exposes CORS-enabled API endpoints to easily run the BOPE process on a pre-processed dataset. 
 
-Use this however you want- either use the Next.js based frontend (go to the live Vercel link) if you want a clean UI interface and automatic data visualization, or alternatively directly hit the API endpoints on the backend through Postman or locally if you run this your computer. To do so through Postman, make sure to add to the CORS origins your own IP address or `[*]` (representing any IP) in `src/main.py`. 
+This can be interacted with either via the Next.js based frontend (go to the live Vercel link) for a clean UI interface and automatic data visualization, or alternatively by directly hitting the API endpoints on the backend through Postman or locally if run locally. To do so through Postman, make sure to add to the CORS origins your own IP address or `[*]` (representing any IP) in `src/main.py`. 
 
 ## Structure 
 
@@ -65,7 +65,7 @@ Look up the official FastAPI docs if you didn't get something here:
 
 Or more about the BOPE process: 
 
-- https://botorch.org/tutorials/bope 
+- https://botorch.org/docs/tutorials/bope/
 
 ## Miscellaneous Notes for Further Development/Refinement: 
 
