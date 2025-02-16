@@ -14,7 +14,13 @@ const server = z.object({
   NEXTAUTH_URL: z.preprocess(
     // This makes Vercel deployments not fail if you don't set NEXTAUTH_URL
     // Since NextAuth.js automatically uses the VERCEL_URL if present.
-    (str) => process.env.VERCEL_URL ?? str,
+    //(str) => process.env.VERCEL_URL ?? str,
+    (str) => {
+      if (process.env.VERCEL_URL && process.env.VERCEL_URL.length > 0) {
+        return `https://${process.env.VERCEL_URL}`;
+      }
+      return str;
+    },
     // VERCEL_URL doesn't include `https` so it cant be validated as a URL
     process.env.VERCEL ? z.string().min(1) : z.string().url(),
   ),
@@ -68,6 +74,13 @@ const skip =
   process.env.SKIP_ENV_VALIDATION !== "0";
 if (!skip) {
   const isServer = typeof window === "undefined";
+
+  // Logging some environment variables
+  console.log('Environment variables before validation:', {
+    NEXTAUTH_URL: processEnv.NEXTAUTH_URL,
+    NODE_ENV: processEnv.NODE_ENV,
+    VERCEL_URL: process.env.VERCEL_URL
+  });
 
   const parsed = /** @type {MergedSafeParseReturn} */ (
     isServer

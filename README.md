@@ -1,10 +1,12 @@
 # BOPE-GPT
 
-BOPE-GPT is a full stack web app dashboard to conduct the BOPE process (Bayesian Optimization with Preference Exploration) on custom datasets via the use of an LLM as the pairwise comparison function. Built with Next.js, FastAPI, MongoDB, Pytorch ML library functions, Plotly, and Cohere's LLM API. 
+BOPE-GPT is a full stack web app dashboard implementing and conducting the BOPE process (Bayesian Optimization with Preference Exploration) on custom datasets via the use of an LLM as the pairwise comparison function. Built with Next.js, FastAPI, MongoDB, Pytorch ML library functions, Plotly, and Cohere's LLM API. 
 
-Check it out at: [https://bope-gpt.vercel.app/](https://bope-gpt.vercel.app/)
+- Check it out at: [https://bope-gpt.vercel.app/](https://bope-gpt.vercel.app/)
 
-Originating from work at the [AC-BO hackathon 2024](https://github.com/AC-BO-Hackathon/BOPE-GPT).
+- BOPE process paper (that this app implements): [https://arxiv.org/abs/2203.11382](https://arxiv.org/abs/2203.11382)
+
+- Originating from work at the [AC-BO hackathon 2024](https://github.com/AC-BO-Hackathon/BOPE-GPT).
 
 ## Contents
 - [Premise](#premise)
